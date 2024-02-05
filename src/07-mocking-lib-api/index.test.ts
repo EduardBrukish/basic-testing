@@ -9,6 +9,10 @@ const baseURL = 'https://jsonplaceholder.typicode.com'
 const mockPath = '/mock/path/path'
 
 describe('throttledGetDataFromApi', () => {
+  beforeAll(() => {
+    jest.useFakeTimers()
+  })
+
   test('should create instance with provided base url', async () => {
     const mockedAxiosInstance = {
       get: jest.fn().mockResolvedValue({}),
