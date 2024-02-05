@@ -6,7 +6,7 @@ jest.mock('./index', () => {
   return  {
     __esModule: true,
     ...originalModule,
-    mockOne: jest.fn(() => {console.log('ONE')}),
+    mockOne: jest.fn(() => {}),
     mockTwo: jest.fn(() => {}),
     mockThree: jest.fn(() => {}),
     unmockedFunction: jest.requireActual<typeof import('./index')>('./index').unmockedFunction,
